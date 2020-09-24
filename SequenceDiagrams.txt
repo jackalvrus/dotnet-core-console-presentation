@@ -1,0 +1,30 @@
+# Go to https://sequencediagram.org to create diagrams
+
+title Web Application
+
+participant Clients
+participant Application
+
+Clients->Application:request 1
+activate Application
+Clients<--Application:response 1
+deactivate Application
+Clients->Application:request 2
+activate Application
+Clients<--Application:response 2
+deactivate Application
+Clients->Application:request 3
+activate Application
+Clients<--Application:response 3
+deactivate Application
+
+
+title Console Utility
+
+actor User
+participant Utility
+
+User->*Utility:command
+note over Utility: Performs operation
+User<-Utility:output
+destroy Utility
